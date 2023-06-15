@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+:root {
+    --black: #22272e;
+    --white: white;
+}
+
 body {
     background-color: aliceblue;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
+
 .menu {
     position: fixed;
     display: flex;
@@ -20,6 +30,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 .nav-link {
     margin: 10px;
     list-style: none;
@@ -30,17 +41,6 @@ body {
     color: black;
 }
 
-.button {
-    width: 300px;
-    height: 100px;
-    border: none;
-    color: aliceblue;
-
-    font-weight: 700;
-    border-radius: 5px;
-    background-color: #22272e;
-}
-
 section {
     display: flex;
     justify-content: center;
@@ -49,11 +49,78 @@ section {
     height: 90vh;
 }
 
-.button:hover {
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: white;
-    color: #22272e;
+.button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    color: white;
+
+    /* Background generator */
+    background: linear-gradient(#22272e, #22272e) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,
+        linear-gradient(90deg, #e141d4 0%, rgba(175, 11, 211, 1) 37%, #6448e0 100%);
+    /* ----------------- */
+
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 7px;
+    box-sizing: border-box;
 }
 
+.fadeInDown {
+    display: flex;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.button-style {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.button:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,
+        linear-gradient(90deg, #e141d4 0%, rgba(175, 11, 211, 1) 37%, #6448e0 100%);
+    border-radius: 0px;
+    padding: 7px;
+    box-sizing: border-box;
+    color: #22272e;
+}
