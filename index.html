@@ -9,6 +9,7 @@
    <body>
       <nav class="menu">
          <h1>LOGO</h1>
+         <!-- a -->
          <ul class="nav-links">
             <li class="nav-link"><a href="#section-1">nav-link-1</a></li>
             <li class="nav-link"><a href="#section-2">nav-link-2</a></li>
@@ -22,15 +23,18 @@
                <button class="button" type="button">
                   <span class="button-style"> Click me </span>
                </button>
+               <form action="submit">
+                  <label for="name">Nombre</label>
+                  <input type="text" id="name">
+                  <label for="price">Precio</label>
+                  <input type="text" id="price">
+               </form>
             </div>
          </section>
-         <section id="section-2 sellingContainer">
-
+         <section id="section-2">
+            <div class="main-card"></div>
          </section>
-         <footer style="background-color: black;">
-            footer
-         </footer>
       </main>
-      <script src="main.js"></script>
+      <script src="./scripts/main.js" type="module"></script>
    </body>
 </html>
